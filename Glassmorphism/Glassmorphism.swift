@@ -20,7 +20,7 @@ struct Glassmorphism: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                Image("4kImage")
+                self.image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .ignoresSafeArea()
@@ -34,9 +34,9 @@ struct Glassmorphism: View {
                         .frame(width: geo.size.width * 0.70,
                                     height: geo.size.height * 0.60)
                         
-                        .rotation3DEffect(.degrees(Double(rotation.width * 0.2)),
+                        .rotation3DEffect(.degrees(Double(rotation.width * 0.6)),
                                           axis: (x: 0.0, y: 1.0, z: 0.0))
-                        .rotation3DEffect(.degrees(Double(rotation.height * -0.2)),                   axis: (x: 1.0, y: 0.0, z: 0.0))
+                        .rotation3DEffect(.degrees(Double(rotation.height * -0.3)),                   axis: (x: 1.0, y: 0.0, z: 0.0))
                         
                         .onTapGesture {
                             self.colorChange()
@@ -110,7 +110,7 @@ struct Glassmorphism: View {
             Spacer()
             
             Text("This card is used to demonstrate the glassmorphism effect.")
-                .font(/*@START_MENU_TOKEN@*/.title2/*@END_MENU_TOKEN@*/)
+                .font(.title2)
                 .multilineTextAlignment(.center)
                 .padding()
             
@@ -133,7 +133,10 @@ struct Glassmorphism: View {
     }
     
     private func handleImage(_ image: UIImage?) {
-        self.image = image != nil ? Image(uiImage: image!) : Image("4kImage")
+        if let imageData = image?.jpegData(compressionQuality: 1.0) {
+            self.image = Image(uiImage: UIImage(data: imageData)!)
+        }
+        self.loadImagePressed = false
     }
 }
 
