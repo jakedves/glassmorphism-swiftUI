@@ -11,6 +11,7 @@
 		502EEE9726BA652E0027DE05 /* Glassmorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502EEE9626BA652E0027DE05 /* Glassmorphism.swift */; };
 		502EEE9926BA65300027DE05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 502EEE9826BA65300027DE05 /* Assets.xcassets */; };
 		502EEE9C26BA65300027DE05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 502EEE9B26BA65300027DE05 /* Preview Assets.xcassets */; };
+		50AF3FF226BA7B98007CC767 /* ImageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF3FF126BA7B98007CC767 /* ImageSelector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		502EEE9826BA65300027DE05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		502EEE9B26BA65300027DE05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		502EEE9D26BA65300027DE05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50AF3FF126BA7B98007CC767 /* ImageSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				502EEE9426BA652E0027DE05 /* GlassmorphismApp.swift */,
 				502EEE9626BA652E0027DE05 /* Glassmorphism.swift */,
+				50AF3FF126BA7B98007CC767 /* ImageSelector.swift */,
 				502EEE9826BA65300027DE05 /* Assets.xcassets */,
 				502EEE9D26BA65300027DE05 /* Info.plist */,
 				502EEE9A26BA65300027DE05 /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				502EEE9726BA652E0027DE05 /* Glassmorphism.swift in Sources */,
+				50AF3FF226BA7B98007CC767 /* ImageSelector.swift in Sources */,
 				502EEE9526BA652E0027DE05 /* GlassmorphismApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

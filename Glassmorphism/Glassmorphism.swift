@@ -9,21 +9,59 @@ import SwiftUI
 
 struct Glassmorphism: View {
     @State private var loadImagePressed = false
+    @State private var image = Image("4kImage")
+    
+    // for the gradient of the card
+    @State private var color1: Color = .red
+    @State private var color2: Color = .blue
+    
+    @State private var rotation = CGSize.zero
     
     var body: some View {
-        ZStack {
-            Image("4kImage")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .ignoresSafeArea()
-                .blur(radius: 15)
-            
-            VStack {
-                Spacer()
-                glassCard
-                Spacer()
-                button
+        GeometryReader { geo in
+            ZStack {
+                Image("4kImage")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .ignoresSafeArea()
+                    .blur(radius: 15)
+                    .scaleEffect(1.1)
+                
+                VStack {
+                    Spacer()
+                    
+                    glassCard
+                        .frame(width: geo.size.width * 0.70,
+                                    height: geo.size.height * 0.60)
+                        
+                        .rotation3DEffect(.degrees(Double(rotation.width * 0.2)),
+                                          axis: (x: 0.0, y: 1.0, z: 0.0))
+                        .rotation3DEffect(.degrees(Double(rotation.height * -0.2)),                   axis: (x: 1.0, y: 0.0, z: 0.0))
+                        
+                        .onTapGesture {
+                            self.colorChange()
+                        }
+                        .gesture(DragGesture()
+                                    .onChanged { value in
+                                        rotation = value.translation
+                                    }
+                                    
+                                    .onEnded { value in
+                                        rotation = CGSize.zero
+                                    })
+                        .animation(.spring())
+                    
+                    Spacer()
+                    
+                    button
+                        .frame(width: geo.size.width * 0.8)
+                        .padding()
+                }
             }
+            .frame(width: geo.size.width)
+            .sheet(isPresented: $loadImagePressed, content: {
+                ImageSelector(processImage: handleImage)
+            })
         }
     }
     
@@ -31,8 +69,7 @@ struct Glassmorphism: View {
         Button("Load Image") {
             loadImagePressed = true
         }
-        .padding(.vertical)
-        .padding(.horizontal, 140)
+        .padding()
         .background(Color(UIColor.secondaryLabel))
         .cornerRadius(12)
     }
@@ -48,15 +85,13 @@ struct Glassmorphism: View {
             
             cardContent
         }
-        .frame(width: 350, height: 550)
-        
     }
     
     private var card: some View {
         Rectangle()
             .fill(LinearGradient(gradient:
                                     Gradient(
-                                        colors: [Color.red, Color.blue]),
+                                        colors: [color1, color2]),
                                         startPoint: .topLeading,
                                         endPoint: .bottomTrailing))
             .cornerRadius(20)
@@ -80,7 +115,25 @@ struct Glassmorphism: View {
                 .padding()
             
             Spacer()
+            Text("Tap to change color")
+                .padding(.vertical)
         }
+    }
+    
+    private func colorChange() {
+        let colors: [Color] = [.red, .blue, .green, .yellow, .pink, .orange,
+                               .purple]
+        
+        self.color1 = colors.randomElement() ?? .red
+        self.color2 = colors.randomElement() ?? .blue
+        
+        if self.color1 == self.color2 {
+            self.colorChange()
+        }
+    }
+    
+    private func handleImage(_ image: UIImage?) {
+        self.image = image != nil ? Image(uiImage: image!) : Image("4kImage")
     }
 }
 
