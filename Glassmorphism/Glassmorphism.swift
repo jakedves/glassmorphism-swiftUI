@@ -12,11 +12,15 @@ struct Glassmorphism: View {
     
     var body: some View {
         ZStack {
-            Image("")
+            Image("4kImage")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea()
+                .blur(radius: 15)
             
             VStack {
                 Spacer()
-                card
+                glassCard
                 Spacer()
                 button
             }
@@ -29,20 +33,33 @@ struct Glassmorphism: View {
         }
         .padding(.vertical)
         .padding(.horizontal, 140)
-        .background(Color(UIColor.quaternaryLabel))
+        .background(Color(UIColor.secondaryLabel))
         .cornerRadius(12)
     }
     
     // An exmaple card
-    private var card: some View {
+    private var glassCard: some View {
         ZStack {
-            Rectangle()
-                .foregroundColor(.red)
-                .cornerRadius(20)
+            // This is the card
+            card
+                .opacity(0.6)
+                .shadow(color: .black.opacity(0.3), radius: 10, x: 10, y: 10)
+                .shadow(color: .black.opacity(0.3), radius: 10, x: -10, y: -10)
             
             cardContent
         }
-        .frame(width: 350, height: 550, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+        .frame(width: 350, height: 550)
+        
+    }
+    
+    private var card: some View {
+        Rectangle()
+            .fill(LinearGradient(gradient:
+                                    Gradient(
+                                        colors: [Color.red, Color.blue]),
+                                        startPoint: .topLeading,
+                                        endPoint: .bottomTrailing))
+            .cornerRadius(20)
     }
     
     private var cardContent: some View {
@@ -67,7 +84,7 @@ struct Glassmorphism: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct Glassmorphism_Previews: PreviewProvider {
     static var previews: some View {
         Glassmorphism()
     }

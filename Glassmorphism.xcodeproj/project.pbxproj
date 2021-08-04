@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		502EEE9526BA652E0027DE05 /* GlassmorphismApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502EEE9426BA652E0027DE05 /* GlassmorphismApp.swift */; };
-		502EEE9726BA652E0027DE05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502EEE9626BA652E0027DE05 /* ContentView.swift */; };
+		502EEE9726BA652E0027DE05 /* Glassmorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502EEE9626BA652E0027DE05 /* Glassmorphism.swift */; };
 		502EEE9926BA65300027DE05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 502EEE9826BA65300027DE05 /* Assets.xcassets */; };
 		502EEE9C26BA65300027DE05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 502EEE9B26BA65300027DE05 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		502EEE9126BA652E0027DE05 /* Glassmorphism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glassmorphism.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		502EEE9426BA652E0027DE05 /* GlassmorphismApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlassmorphismApp.swift; sourceTree = "<group>"; };
-		502EEE9626BA652E0027DE05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		502EEE9626BA652E0027DE05 /* Glassmorphism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glassmorphism.swift; sourceTree = "<group>"; };
 		502EEE9826BA65300027DE05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		502EEE9B26BA65300027DE05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		502EEE9D26BA65300027DE05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,7 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				502EEE9426BA652E0027DE05 /* GlassmorphismApp.swift */,
-				502EEE9626BA652E0027DE05 /* ContentView.swift */,
+				502EEE9626BA652E0027DE05 /* Glassmorphism.swift */,
 				502EEE9826BA65300027DE05 /* Assets.xcassets */,
 				502EEE9D26BA65300027DE05 /* Info.plist */,
 				502EEE9A26BA65300027DE05 /* Preview Content */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				502EEE9726BA652E0027DE05 /* ContentView.swift in Sources */,
+				502EEE9726BA652E0027DE05 /* Glassmorphism.swift in Sources */,
 				502EEE9526BA652E0027DE05 /* GlassmorphismApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
