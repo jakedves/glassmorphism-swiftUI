@@ -1,4 +1,4 @@
-# Glassmorphism in SwiftUI Example app
+# Glassmorphism in SwiftUI (example app)
 
 ## Description
 
