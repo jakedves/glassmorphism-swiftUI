@@ -11,6 +11,7 @@
 		502EEE9726BA652E0027DE05 /* Glassmorphism.swift in Sources */ = {isa = PBXBuildFile; fileRef = 502EEE9626BA652E0027DE05 /* Glassmorphism.swift */; };
 		502EEE9926BA65300027DE05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 502EEE9826BA65300027DE05 /* Assets.xcassets */; };
 		502EEE9C26BA65300027DE05 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 502EEE9B26BA65300027DE05 /* Preview Assets.xcassets */; };
+		505162F126BD8284005B2B22 /* Glassmorphism.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 505162EF26BD8284005B2B22 /* Glassmorphism.xcdatamodeld */; };
 		50AF3FF226BA7B98007CC767 /* ImageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AF3FF126BA7B98007CC767 /* ImageSelector.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 		502EEE9826BA65300027DE05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		502EEE9B26BA65300027DE05 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		502EEE9D26BA65300027DE05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		505162F026BD8284005B2B22 /* Glassmorphism.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Glassmorphism.xcdatamodel; sourceTree = "<group>"; };
 		50AF3FF126BA7B98007CC767 /* ImageSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -60,6 +62,7 @@
 				502EEE9826BA65300027DE05 /* Assets.xcassets */,
 				502EEE9D26BA65300027DE05 /* Info.plist */,
 				502EEE9A26BA65300027DE05 /* Preview Content */,
+				505162EF26BD8284005B2B22 /* Glassmorphism.xcdatamodeld */,
 			);
 			path = Glassmorphism;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				502EEE9726BA652E0027DE05 /* Glassmorphism.swift in Sources */,
 				50AF3FF226BA7B98007CC767 /* ImageSelector.swift in Sources */,
 				502EEE9526BA652E0027DE05 /* GlassmorphismApp.swift in Sources */,
+				505162F126BD8284005B2B22 /* Glassmorphism.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +336,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		505162EF26BD8284005B2B22 /* Glassmorphism.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				505162F026BD8284005B2B22 /* Glassmorphism.xcdatamodel */,
+			);
+			currentVersion = 505162F026BD8284005B2B22 /* Glassmorphism.xcdatamodel */;
+			path = Glassmorphism.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 502EEE8926BA652E0027DE05 /* Project object */;
 }

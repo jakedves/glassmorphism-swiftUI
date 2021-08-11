@@ -31,28 +31,20 @@ struct Glassmorphism: View {
                     Spacer()
                     
                     glassCard
-                        .frame(width: geo.size.width * 0.70,
-                                    height: geo.size.height * 0.60)
-                        
-                        .rotation3DEffect(.degrees(Double(rotation.width * 0.6)),
-                                          axis: (x: 0.0, y: 1.0, z: 0.0))
-                        .rotation3DEffect(.degrees(Double(rotation.height * -0.3)),                   axis: (x: 1.0, y: 0.0, z: 0.0))
-                        
-                        .onTapGesture {
-                            self.colorChange()
-                        }
+                        .frame(width: geo.size.width * 0.70, height: geo.size.height * 0.60)
+                        .rotation3DEffect(.degrees(Double(rotation.width * 0.6)), axis: (x: 0.0, y: 1.0, z: 0.0))
+                        .rotation3DEffect(.degrees(Double(rotation.height * -0.3)), axis: (x: 1.0, y: 0.0, z: 0.0))
+                        .onTapGesture { self.colorChange() }
                         .gesture(DragGesture()
                                     .onChanged { value in
                                         rotation = value.translation
                                     }
-                                    
                                     .onEnded { value in
                                         rotation = CGSize.zero
                                     })
                         .animation(.spring())
                     
                     Spacer()
-                    
                     button
                         .frame(width: geo.size.width * 0.8)
                         .padding()
